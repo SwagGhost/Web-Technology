@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+  <link rel="stylesheet" href="print.css" type="text/css" media="print">
+  <title>Phone World webshop</title>
+</head><!-- The form to add phones is being printed, because when we tried to not print it,
+would have as an effect that there is an extra paper needed (three papers instead of four). -->
+<body>
+  <div id="topbar">
+    <div id="logo">Phone World</div>
+    <div id="toplinks" class="no-print">
+      <a href="#contact" alt="contact">Contact</a>
+      <a href="#customer-service" alt="customer service">Customer service</a></div>
+  </div>
+
+  <header>
+    <nav>
+      <a class="navlink" href="#home" alt="home">Home</a>
+      <a id="active" class="navlink" href="#webshop" alt="webshop">Webshop</a>
+      <a class="navlink" href="#service" alt="service">Service</a>
+      <a class="navlink floatright" href="#forum" alt="forum">Forum</a>
+      <a class="navlink floatright" href="login" alt="login">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Webshop</h1>
+    <h2>Telephones</h2>
+
+    <div id="sidebar">
+      <section class="no-print"><p>Filter</p>
+        <form class="sideforms">
+          <label>Brand</label><br>
+          <input class="cursorpointer" type="checkbox" name="htc" value="HTC (1)" checked>HTC<br>
+          <input class="cursorpointer" type="checkbox" name="iphone" value="iPhone (2)" checked>iPhone<br>
+          <input class="cursorpointer" type="checkbox" name="nokia" value="Nokia (1)">Nokia<br>
+          <input class="cursorpointer" type="checkbox" name="samsung" value="Samsung (3)">Samsung<br>
+          <input class="cursorpointer" type="checkbox" name="sony" value="Sony (2)">Sony<br><br>
+          <label>Sort by</label><br>
+          <select name="sortby">
+            <option value="latest">Latest</option>
+            <option value="lowhigh">Price low-high</option>
+            <option value="highlow">Price high-low</option>
+            <option value="popular">Most popular</option>
+          </select><br><br>
+          <input class="cursorpointer" type="reset" name="reset" value="Reset">
+          <input class="cursorpointer" type="submit" name="filter" value="Filter">
+        </form>
+      </section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <section>
+        <p>Best sold phones</p>
+        <ol id="bestsoldlist">
+          <li><a class="sidelinks" href="#iphone6" alt="iphone 6">iPhone 6</a></li>
+          <li><a class="sidelinks" href="#iphonex" alt="ihpone x">iPhone X</a></li>
+          <li><a class="sidelinks" href="#htc" alt="htc one m7">HTC One (M7)</a></li>
+        </ol>
+      </section>
+        <br>
+      <section>
+        <p>Why Phone World
+          <pre id="whyphoneworld">
+We have been an offcial webshop
+since 2005. Since we started, we
+give our customers guarantee
+smartphone. If you are not happy
+with your phone, you can return
+it within one week.</pre>
+      </p></section>
+    </div>
+
+    <button id="cartbutton" class="cursorpointer no-print" type="button" onclick="alert('Shopping cart is empty.')">Shopping cart &#x1f6d2;</button>
+
+    <div id="bestwebshop">
+      <p>
+        <dl id="bestwebshoplist">
+          <dt><q><strong>Best phone webshop on the web.</strong></q> Why?</dt>
+          <dd>We sell the most latest phones for the lowest prices.</dd>
+          <dd>We have been winning the "Best phone webshop" award for ten years in a row since 2008.</dd>
+        </dl>
+      </p>
+    </div>
+
+    <table id="maintable">
+  		<caption>Products</caption>
+  		<tr>
+  			<th>Brand</th>
+  			<th>Model</th>
+  			<th><abbr>OS</abbr></th>
+  			<th>Screen size</th>
+  			<th>Image</th>
+  		</tr>
+  		<tr id="iphonex">
+  			<td>Apple
+          <form class="no-print"><br>
+            <input class="buyphone" type="number" name="quantity" value="1"><br>
+            <input class="cursorpointer" type="submit" name="add" value="Add to cart">
+          </form></td>
+  			<td>iPhone X</td>
+  			<td>iOS</td>
+  			<td>5.8"</td>
+  			<td>
+  				<figure>
+  						<img class="phoneimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png">
+  						<figcaption class="figcaption">iPhone X</figcaption>
+  				</figure>
+  			</td>
+  		</tr>
+  		<tr id="iphone6">
+  			<td>Apple
+        <form class="no-print"><br>
+          <input class="buyphone" type="number" name="quantity" value="1"><br>
+          <input class="cursorpointer" type="submit" name="add" value="Add to cart">
+        </form></td>
+  			<td>iPhone 6</td>
+  			<td>iOS</td>
+  			<td>4.7"</td>
+  			<td>
+  				<figure>
+  					<img class="phoneimg" src="http://shop.vodafone.ie/shop/img/Phones/Apple/iPhone%206/Apple_iPhone6_grey_large.png">
+  					<figcaption class="figcaption">iPhone 6</figcaption>
+  				</figure>
+  			</td>
+  		</tr>
+  		<tr id="htc">
+  			<td>HTC
+        <form class="no-print"><br>
+          <input class="buyphone" type="number" name="quantity" value="1"><br>
+          <input class="cursorpointer" type="submit" name="add" value="Add to cart">
+        </form></td>
+  			<td>One (M7)</td>
+  			<td>Android</td>
+  			<td>4.7"</td>
+  			<td>
+  				<figure>
+  					<img class="phoneimg" src="http://pngimg.com/uploads/smartphone/smartphone_PNG8523.png">
+  					<figcaption class="figcaption">HTC One (M7)</figcaption>
+  				</figure>
+  			</td>
+  		</tr>
+  		<tr>
+  			<form action="https://wt.ops.labs.vu.nl/api18/99fff472" metdod="post">
+  				<td>
+  					<br>
+  					<input type="text" name="brand" placeholder="Brand" required></td>
+  				<td>
+  					<br>
+  					<input type="text" name="model" placeholder="Model" required></td>
+  				<td>
+  					<br>
+  					<input type="text" name="os" placeholder="Operating system" required></td>
+  				<td>
+  					<br>
+  					<input type="number" id="inputscreensize" name="screensize" placeholder="inch" required></td>
+  				<td>
+  					<br>
+  					<input type="url" id="inputimageurl" name="imageurl" placeholder="URL" required>
+  					<input id="tableformreset" class="tableformbutton cursorpointer" type="reset" value="Reset form">
+  					<input id="tableformsubmit" class="tableformbutton cursorpointer" type="submit" value="Add new phone"></td>
+  			</form>
+  		</tr>
+    </table>
+
+    <div id="pagebottom">
+      <table id="reviewstable">
+        <caption>Reviews</caption>
+        <td>
+          <pre><blockquote cite="http://www.techradar.com/reviews/phones/mobile-phones/iphone-6-1264565/review">
+            <em>
+"The iPhone 6 addressed a number
+of problems Apple had developed,
+coming with a much larger screen
+(although not dramatically increasing
+the size of the phone) a boosted
+processor, better camera, improved
+battery and - crucially - overhauled
+went into the iPhone 6S was done here,
+with the iPhone 6."</em></blockquote>
+- radar.com</pre></td>
+        <td>
+          <pre><blockquote cite="https://www.cnet.com/products/apple-iphone-x/review/">
+            <em>
+"A great blend of handheld comfort
+and a big, gorgeous OLED screen. Rear
+telephoto camera outshoots the 8 Plus in
+low light, and the front camera snaps
+impressiveportrait selfies. Face ID
+generally works fine."</em></blockquote>
+- cnet.com</pre></td>
+        <td>
+        <pre><blockquote cite="http://www.expertreviews.co.uk/mobile-phones/53530/htc-one-m7-2013-review">
+          <em>
+"In a sea of plastic smartphones,
+its gorgeous metal body made it
+stand out compared to the
+competition from Samsung's
+Galaxy S3.</em></blockquote>
+- expertreviews.co.uk</pre></td>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <form class="no-print">
+      <p>What do you think of this page?</p>
+      <input class="cursorpointer" type="radio" name="opinion" value="yes" onclick="this.form.submit()"> &#x263A;
+      <input class="cursorpointer" type="radio" name="opinion" value="no" onclick="this.form.submit()"> &#x2639;
+    </form>
+    <br>
+    <table id="footertable">
+      <tr>
+        <th><a href="#telephones-information" alt="telephones information">Telephones</a></th>
+        <th><a href="#customer-service" alt="customer service">Customer service</a></th>
+        <th><a href="#my-phone-world" alt="my phone world">My Phone World</a></th>
+      </tr>
+      <tr>
+        <td><a href="#webshop" alt="webshop">All devices</a></td>
+        <td><a href="#faq" alt="frequently asked questions">FAQ</a></td>
+        <td><a href="#login" alt="login">Login</a></td>
+      </tr>
+      <tr>
+          <td><a href="#device-brands" alt="device brands">Device brands</a></td>
+          <td><a href="#shops" alt="shops">Shops</a></td>
+          <td><a href="#register" alt="register">Register</a></td>
+      </tr>
+      <tr>
+        <td><a href="#latest-phones" alt="latest phones">Latest phones</a></td>
+        <td><a href="#contact" alt="contact">Contact</a></td>
+        <td><a href="#phone-world-app" alt="phone world app">Phone World App</a></td>
+      </tr>
+    </table>
+
+    <ul id="footerlinks">
+      <li><a href="#about-phone-world" alt="about phone world">About Phone World</a></li>
+      <li><a href="#prices" alt="prices">Prices</a></li>
+      <li><a href="#policies" alt="policies">Policies</a></li>
+      <li><a href="#vacancies" alt="vacancies">Vacancies</a></li>
+      <li><a href="#privacy" alt="privacy">Privacy</a></li>
+      <li><a href="#cookies" alt="cookies">Cookies</a></li>
+      <li><a href="#contact" alt="contact">Contact</a></li>
+    </ul>
+  </footer>
+</body>
