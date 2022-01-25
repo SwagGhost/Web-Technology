@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Telephone data</title>
+        <style>
+        body {
+            font-family: arial;
+            background-color: #EEEEEE;
+        }
+        
+        main {
+            background-color: #FFFFFF;
+            border: 1px solid #BBBBBB;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            margin-left: 0.5%;
+            margin-right: 0.5%;
+        }
+        
+        div {
+            margin: 2%;
+        }
+        
+        code {
+            background-color: #F8F8F8;
+            border-radius: 2%;
+        }
+        
+        .code {
+            background-color: #F7F7F7;
+            color: #444444;
+            border: 1px solid #CCCCCC;
+            padding: 7.5px;
+            border-radius: 2%;
+        }
+        
+        .data {
+            background-color: #FFFFFF;
+        }
+        
+        table, th, td {
+            text-align: left;
+        }
+        
+        .example {
+            border: 1px solid #CCCCCC;
+            border-radius: 2%;
+            text-align: left;
+        }
+        
+        .example tr:nth-child(odd) {
+            background-color: #F8F8F8;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <main>
+            <div>
+                <h1>Telephone data</h1>
+                <p>Get, post, update, delete and reset telephone data.</p>
+                <hr>
+                <h2>Endpoints</h2>
+                <table>
+                    <tr>
+                        <th><h3>Functionality</h3></th>
+                        <th><h3>URIs and HTTP methods<h3></th>
+                    </tr>
+                    <tr>
+                        <td class="right">Retrieve full dataset:</td>
+                        <td><p><code class="code">GET http://localhost:8080/telephones</code></p></td>
+                    </tr>
+                    <tr>
+                        <td class="right">Add data for new product item:</td>
+                        <td><p><code class="code">POST http://localhost:8080/telephones</code></p></td>
+                    </tr>
+                    <tr>
+                        <td class="right">List data of specific item:</td>
+                        <td><p><code class="code">GET http://localhost:8080/telephones/{id}</code></p></td>
+                    </tr>
+                    <tr>
+                        <td class="right">Change data of specific item:</td>
+                        <td><p><code class="code">PUT http://localhost:8080/telephones</code></p></td>
+                    </tr>
+                    <tr>
+                        <td class="right">Remove data of specific item:</td>
+                        <td><p><code class="code">DELETE http://localhost:8080/telephones/{id}</code></p></td>
+                    </tr>
+                    <tr>
+                        <td class="right">Reset database:</td>
+                        <td><p><code class="code">DELETE http://localhost:8080/telephones</code></p></td>
+                    </tr>
+                </table>
+                
+                <h4>Request parameter for <code>GET</code> and <code>DELETE</code> requests</h4>
+                <p>The path parameter <code>id</code> contains the value of the id of the specific item.</p>
+                
+                <br>
+                
+                <h2>Response format</h2>
+                <h3><code>POST</code> request</h3>
+                <p>If a <code>POST</code> request is made in order to add the data for a new product item, then the response body contains on success no content and response header contains the HTTP status code <code>201</code> (Created). For making the request, the request body should contain the data of the new product item in JSON format.</p>
+                <h3><code>GET</code> requests</h3>
+                <p>If a <code>GET</code> request is made to list the data of a specific item or to get the full dataset, then the response body contains on success, respectively, a list of the data of a specific item or the full dataset in JSON format and the response header contains the HTTP status code <code>201</code> (OK).</p>
+                <h3><code>PUT</code> request</h3>
+                <p>If a <code>PUT</code> request is made in order to change the data of a specific item, then the response body contains on success no content and the response header contains the HTTP status code <code>204</code> (No content). For making the request, the request body should contain the updated data of the specific item (including its unique id) in JSON format.</p>
+                <h3><code>DELETE</code> requests</h3>
+                <p>If a <code>DELETE</code> request is made in order to remove the data of a specific item or to remove all data items, then the response body contains on success no content and response header contains the HTTP status code <code>204</code> (No content).</p>
+                
+                <br>
+                
+                <h2>Response status codes</h2>
+                <table>
+                    <tr>
+                        <th><h3>HTTP method<h3></th>
+                        <th><h3>CRUD<h3></th>
+                        <th><h3>Status codes<h3></th>
+                    </tr>
+                    <tr>
+                        <td><code>POST</code></td>
+                        <td>Create</td>
+                        <td><code>201</code> (Created), <code>400</code> (Bad request) if syntax is malformed, <code>405</code> (Method not allowed) if request is made to <code>http://localhost:8080/phones/{id}</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>GET</code></td>
+                        <td>Retrieve</td>
+                        <td><code>200</code> (OK), <code>404</code> (Not found) if database is empty or if specifc item id not found or invalid. </td>
+                    </tr>
+                    <tr>
+                        <td><code>PUT</code></td>
+                        <td>Update</td>
+                        <td><code>204</code> (No content), <code>400</code> (Bad request) if syntax is malformed, <code>404</code> (Not found) if item is not found or invalid, <code>405</code> (Method not allowed) if request is made to <code>http://localhost:8080/phones/{id}</code>, <code>409</code> (Conflict) if the item has already been updated or if the data sent is the same as the current data.</td>
+                    </tr>
+                    <tr>
+                        <td><code>DELETE</code></td>
+                        <td>Delete</td>
+                        <td><code>204</code> (No content), <code>404</code> (Not found) if database is empty or if specific item is not found (as it might have already been deleted) or invalid.</td>
+                    </tr>
+                </table>
+                
+                <p>If there is an internal server error, the response status code will be <code>500</code> (Internal server error).</p>
+                <p>In case of an error, the response body contains the corresponding status code. If the status code indicates a succeeded request, then it will be included in header.</p>
+                
+                <br>
+                
+                <h2>Examples</h2>
+                <h3>Add data for new product item</h3>
+                <table class="example">
+                    <tr>
+                        <td>
+                            <code>
+                                $ curl -H "Content-Type: application/json" -X POST -d '{"brand": "Apple", "screensize": "6", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png", "model": "iPhone X", "os": "iOS", "rowid": "2"}' http://localhost:8080/telephones
+                                
+                            </code>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <h3>Retrieve full dataset</h3>
+                <table class="example">
+                    <tr><td><code>$ curl -X GET "http://localhost:8080/telephones"</code></td></tr>
+                    <tr>
+                        <td>
+                            <code class="data">
+                                [["HTC", 5, "http://pngimg.com/uploads/smartphone/smartphone_PNG8523.png", "One (M7)", "Android", 1], ["Apple", 6, "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png", "iPhone X", "iOS", 2]]
+                            </code>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <h3>List data of specific item</h3>
+                <table class="example">
+                    <tr><td><code>$ curl -X GET "http://localhost:8080/telephones/1"</code></td></tr>
+                    <tr>
+                        <td>
+                            <code class="data">
+                                [["HTC", 5, "http://pngimg.com/uploads/smartphone/smartphone_PNG8523.png", "One (M7)", "Android", 1]]
+                            </code>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br>
+
+                <h3>Change data of specific item</h3>
+                <table class="example">
+                    <tr>
+                        <td>
+                            <code>
+                                $ curl -H "Content-Type: application/json" -X PUT -d '{"brand": "Apple", "screensize": "5", "image": "http://shop.vodafone.ie/shop/img/Phones/Apple/iPhone%206/Apple_iPhone6_grey_large.png", "model": "iPhone 6", "os": "iOS", "rowid": "1"}' http://localhost:8080/telephones
+                            </code>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <h3>Remove data of specific item</h3>
+                <table class="example">
+                    <tr>
+                        <td>
+                            <code id="command">
+                                $ curl -X DELETE "http://localhost:8080/telephones/1"
+                            </code>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <h3>Reset database</h3>
+                <table class="example">
+                    <tr>
+                        <td>
+                            <code id="command">
+                                $ curl -X DELETE "http://localhost:8080/telephones"
+                            </code>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>
