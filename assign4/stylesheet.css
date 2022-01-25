@@ -1,0 +1,315 @@
+body {
+  background: #FFFFFF;
+  color: #000000;
+  font: 100% arial;
+  text-align: center;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.cursorpointer {
+  cursor: pointer;
+}
+
+#topbar {
+  background: url("https://thumbs.dreamstime.com/z/vector-illustration-telephone-abstract-wallpaper-background-image-29761713.jpg") no-repeat fixed center;
+  width: 100%;
+  overflow: hidden;
+}
+
+#topbar #logo {
+  color: #BC1868;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: capitalize;
+  float: left;
+}
+
+#topbar #toplinks a {
+  text-decoration: none;
+  margin-left: 1%;
+  float: right;
+}
+
+#topbar #toplinks a:link, #toplinks a:visited, #toplinks a:hover, #toplinks a:focus {
+  color: #bc1868;
+}
+
+#topbar #toplinks a:active {
+  color: #000000;
+}
+
+nav {
+  background-color: #AAAAAA;
+  width: 100%;
+  overflow: hidden;
+}
+
+nav a {
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 20px;
+  float: left;
+}
+
+nav a.floatright {
+  float: right;
+}
+
+nav a.navlink:link, nav a.navlink:visited, nav a.navlink:focus {
+  color: #FFFFFF;
+}
+
+nav a.navlink:hover, nav a.navlink:active {
+  background-color: #BBBBBB;
+  color: #000000;
+}
+
+nav a#active, nav a#active:hover {
+  background-color: #BC1868;
+  color: #FFFFFF;
+}
+
+header {
+  text-align: left;
+  color: #FFFFFF;
+  width: 100%;
+  height: 290px;
+  background-size: cover;
+  padding: 0 0 15%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('http://bareklifttrucks.co.uk/wp-content/uploads/2017/09/mobile-phone-evolution.jpg');
+  background-repeat: none;
+}
+
+#sidebar {
+  background-color: #BBBBBB;
+  padding: 2%;
+  margin-right: 3%;
+  margin-top: 1.25%;
+  float: right;
+}
+
+#sidebar h3 {
+  color: #000000;
+  font-size: 110%;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+.sideforms {
+  text-align: left;
+  margin: 5%;
+  float: left;
+}
+
+#bestsoldlist {
+  list-style-position: outside;
+}
+
+a.sidelinks {
+  text-decoration: none;
+  float: left;
+}
+
+a.sidelinks:link, a.sidelinks:visited, a.sidelinks:focus {
+  color: #000000;
+}
+
+a.sidelinks:active {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+#whyphoneworld {
+  text-indent: 5%;
+  text-align: left;
+  float: left;
+}
+
+#cartbutton {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 110%;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  display: inline-block;
+  top: 200px;
+  left: -120px;
+  float: left;
+  position: fixed;
+}
+
+#cartbutton:hover {
+  background-color: #DDDDDD;
+  color: #000000;
+  left: 0px;
+  transition-duration: 0.5s;
+}
+
+#bestwebshop {
+  text-align: left;
+  margin-left: 3%;
+  float: left;
+}
+
+#bestwebshoplist {
+  list-style-type: none;
+}
+
+#maintable {
+  border-collapse: collapse;
+  caption-side: top;
+  width: 40%;
+  margin-left: 3%;
+  margin-right: auto;
+}
+
+#maintable th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 8px;
+}
+
+#maintable tr:nth-child(even) {
+  background-color: #EEEEEE
+}
+
+.buyphone {
+  margin-left: 1.5%;
+  width: 45%;
+}
+
+#maintable .figcaption {
+  font-size: 10px;
+  text-align: center;
+}
+
+.phoneimg {
+  height: 384px;
+  padding-bottom: 10%;
+  margin: 5%;
+}
+
+.phoneimg:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+
+#inputscreensize {
+  width: 75%;
+}
+
+#inputimageurl {
+  width: 31.25%
+}
+
+.tableformbutton {
+  background-color: #FFFFFF;
+  color: #000000;
+  border-radius: 8px;
+}
+
+.tableformbutton:hover {
+  color: #FFFFFF;
+  transition-duration: 0.5s;
+}
+
+#tableformsubmit {
+  border: 2px solid green;
+}
+
+#tableformsubmit:hover {
+  background-color: green;
+}
+
+#tableformreset {
+  border: 2px solid red;
+}
+
+#tableformreset:hover {
+  background-color: red;
+}
+
+#pagebottom {
+  background-color: #BBBBBB;
+  width: 100%;
+  overflow: hidden;
+}
+
+#reviewstable {
+    width: 100%;
+}
+
+#reviewstable td {
+  text-align: left;
+  vertical-align: middle;
+  float: center;
+}
+
+footer {
+  background-color: #CCCCCC;
+  font-size: 75%;
+  font-family: arial;
+  font-style: normal;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+#footertable {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footertable td, th {
+  border-color: #DDDDDD;
+  border-width: 1px;
+  border-style: solid;
+  border-spacing: 2px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#footertable a {
+  text-decoration: none;
+  margin-bottom: 2%;
+}
+
+#footertable a:link, li a:visited, a:hover, li a:focus {
+  color: #000000;
+}
+
+#footertable a:active {
+  color: #666666;
+}
+
+#footerlinks li {
+  list-style-type: none;
+  list-style-image: none;
+  text-align: center;
+  display: inline;
+}
+
+#footerlinks li a {
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  float: center;
+}
+
+#footerlinks li a:link, li a:visited, a:hover, li a:focus {
+  color: #666666;
+}
+
+#footerlinks li a:active {
+  color: #AAAAAA;
+}
