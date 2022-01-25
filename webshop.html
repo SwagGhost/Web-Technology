@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+  <link rel="stylesheet" href="print.css" type="text/css" media="print">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.w3schools.com//lib/w3.js" type="text/javascript"></script>
+  <script src="reset.js" type="text/javascript"></script>
+  <script src="getData.js" type="text/javascript"></script>
+  <script src="submit.js" type="text/javascript"></script>
+  <script src="keyboardShortcuts.js" type="text/javascript"></script>
+  <title>Phone World webshop</title>
+</head>
+
+<body>
+  <div id="topbar">
+    <div id="logo">Phone World</div>
+    <div id="toplinks" class="no-print">
+      <a id="link1" href="#contact">Contact</a>
+      <a id="link0" href="#customer-service">Customer service</a></div>
+  </div>
+  <header>
+    <nav>
+      <a id="link2" class="navlink" href="#home">Home</a>
+      <a id="active" class="navlink" href="#webshop">Webshop</a>
+      <a id="link4" class="navlink" href="#service">Service</a>
+      <a id="link5" class="navlink floatright" href="#forum">Forum</a>
+      <a id="link6" class="navlink floatright" href="login">Login</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Webshop</h1>
+    <h2>Telephones</h2>
+    <div id="sidebar">
+      <section class="no-print">
+        <h3>Filter</h3>
+        <form class="sideforms">
+          <label>Brand</label><br>
+          <input class="cursorpointer" type="checkbox" name="htc" value="HTC (1)" checked>HTC<br>
+          <input class="cursorpointer" type="checkbox" name="iphone" value="iPhone (2)" checked>iPhone<br>
+          <input class="cursorpointer" type="checkbox" name="nokia" value="Nokia (1)">Nokia<br>
+          <input class="cursorpointer" type="checkbox" name="samsung" value="Samsung (3)">Samsung<br>
+          <input class="cursorpointer" type="checkbox" name="sony" value="Sony (2)">Sony<br><br>
+          <label>Sort by</label><br>
+          <select name="sortby">
+            <option value="latest">Latest</option>
+            <option value="lowhigh">Price low-high</option>
+            <option value="highlow">Price high-low</option>
+            <option value="popular">Most popular</option>
+          </select><br><br>
+          <input class="cursorpointer" type="reset" name="reset" value="Reset">
+          <input class="cursorpointer" type="submit" name="filter" value="Filter">
+        </form>
+      </section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <section>
+        <h3>Best sold phones</h3>
+        <ol id="bestsoldlist">
+          <li><a id="link7" class="sidelinks" href="#iphone6">iPhone 6</a></li>
+          <li><a id="link8" class="sidelinks" href="#iphonex">iPhone X</a></li>
+          <li><a id="link9" class="sidelinks" href="#htc">HTC One (M7)</a></li>
+        </ol>
+      </section>
+        <br>
+      <section>
+        <h3>Why Phone World</h3>
+        <pre id="whyphoneworld">
+We have been an official webshop
+since 2005. Since we started, we
+give our customers guarantee
+smartphone. If you are not happy
+with your phone, you can return
+it within one week.
+        </pre>
+      </section>
+    </div>
+    <button id="cartbutton" class="cursorpointer no-print" type="button" onclick="alert('Shopping cart is empty.')">Shopping cart &#x1f6d2;</button>
+    <div id="bestwebshop">
+      <dl id="bestwebshoplist">
+        <dt><p><q><strong>Best phone webshop on the web.</strong></q> Why?</p></dt>
+        <dd><p>We sell the most latest phones for the lowest prices.</p></dd>
+        <dd><p>We have been winning the "Best phone webshop" award for ten years in a row since 2008.</p></dd>
+      </dl>
+    </div>
+
+    <br>
+
+    <form id="form" class="no-print" action="https://wt.ops.labs.vu.nl/api18/99fff472" method="post">
+    <table id="maintable">
+  		<caption>Products</caption>
+  		<tr>
+        <th onclick="w3.sortHTML('#maintable', '.item', 'td:nth-child(1)')" class="cursorpointer">Brand</th>
+        <th onclick="w3.sortHTML('#maintable', '.item', 'td:nth-child(2)')" class="cursorpointer">Model</th>
+        <th onclick="w3.sortHTML('#maintable', '.item', 'td:nth-child(3)')" class="cursorpointer">OS</th>
+        <th onclick="w3.sortHTML('#maintable', '.item', 'td:nth-child(4)')" class="cursorpointer">Screensize</th>
+        <th onclick="w3.sortHTML('#maintable', '.item', 'td:nth-child(5)')" class="cursorpointer">maintable</th>
+  		</tr>
+      <tr>
+          <td><input id="brand" type="text" name="brand" placeholder="Brand" required></td>
+  				<td><input id="model" type="text" name="model" placeholder="Model" required></td>
+  				<td><input id="os" type="text" name="os" placeholder="Operating system" required></td>
+  				<td><input id="screensize" type="number" name="screensize" placeholder="inch" required></td>
+  				<td>
+  					<input type="url" id="inputimageurl" name="image" placeholder="URL" required>
+  					<button id="tableformreset" class="tableformbutton cursorpointer" type="reset">Reset</button>
+  					<button id="tableformsubmit" class="tableformbutton cursorpointer" type="submit">Add new phone</button>
+          </td>
+  		</tr>
+    </table>
+    </form>
+
+    <form id="resetdata" class="no-print" action="https://wt.ops.labs.vu.nl/api18/99fff472/reset" method="get">
+      <button type="submit" value="Reset database">Reset</button>
+    </form>
+    <div id="pagebottom">
+      <table id="reviewstable">
+        <caption>Reviews</caption>
+        <tr>
+          <td>
+            <blockquote cite="http://www.techradar.com/reviews/phones/mobile-phones/iphone-6-1264565/review"><pre>
+              <em>
+"The iPhone 6 addressed a number
+of problems Apple had developed,
+coming with a much larger screen
+(although not dramatically increasing
+the size of the phone) a boosted
+processor, better camera, improved
+battery and - crucially - overhauled
+went into the iPhone 6S was done here,
+with the iPhone 6."</em></pre></blockquote>
+<pre>- radar.com</pre>
+          </td>
+          <td>
+            <blockquote cite="https://www.cnet.com/products/apple-iphone-x/review/"><pre>
+              <em>
+"A great blend of handheld comfort
+and a big, gorgeous OLED screen. Rear
+telephoto camera outshoots the 8 Plus in
+low light, and the front camera snaps
+impressiveportrait selfies. Face ID
+generally works fine."</em></pre></blockquote>
+<pre>- cnet.com</pre>
+          </td>
+          <td>
+          <blockquote cite="http://www.expertreviews.co.uk/mobile-phones/53530/htc-one-m7-2013-review"><pre>
+            <em>
+"In a sea of plastic smartphones,
+its gorgeous metal body made it
+stand out compared to the
+competition from Samsung's
+Galaxy S3.</em></pre></blockquote>
+<pre>- expertreviews.co.uk</pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </main>
+  <footer>
+    <form class="no-print">
+      <p>What do you think of this page?</p>
+      <input class="cursorpointer" type="radio" name="opinion" value="yes" onclick="this.form.submit()"> &#x263A;
+      <input class="cursorpointer" type="radio" name="opinion" value="no" onclick="this.form.submit()"> &#x2639;
+    </form>
+    <br>
+    <table id="footertable">
+      <tr>
+        <th onclick="w3.sortHTML('#footertable', '.item2', 'td:nth-child(1)')" class="cursorpointer"><a id="link10" href="#telephones-information">Telephones</a></th>
+        <th onclick="w3.sortHTML('#footertable', '.item2', 'td:nth-child(2)')" class="cursorpointer"><a id="link11" href="#customer-service">Customer service</a></th>
+        <th onclick="w3.sortHTML('#footertable', '.item2', 'td:nth-child(3)')" class="cursorpointer"><a id="link12" href="#my-phone-world">My Phone World</a></th>
+      </tr>
+      <tr class="item2">
+        <td><a id="link13" href="#webshop">All devices</a></td>
+        <td><a id="link14" href="#faq">FAQ</a></td>
+        <td><a id="link15" href="#login">Login</a></td>
+      </tr>
+      <tr class="item2">
+          <td><a id="link16" href="#device-brands">Device brands</a></td>
+          <td><a id="link17" href="#shops">Shops</a></td>
+          <td><a id="link18" href="#register">Register</a></td>
+      </tr>
+      <tr class="item2">
+        <td><a id="link19" href="#latest-phones">Latest phones</a></td>
+        <td><a id="link20" href="#contact">Contact</a></td>
+        <td><a id="link21" href="#phone-world-app">Phone World App</a></td>
+      </tr>
+    </table>
+    <ul id="footerlinks">
+      <li><a id="link22" href="#about-phone-world">About Phone World</a></li>
+      <li><a id="link23" href="#prices">Prices</a></li>
+      <li><a id="link24" href="#policies">Policies</a></li>
+      <li><a id="link25" href="#vacancies">Vacancies</a></li>
+      <li><a id="link26" href="#privacy">Privacy</a></li>
+      <li><a id="link27" href="#cookies">Cookies</a></li>
+      <li><a id="link28" href="#contact">Contact</a></li>
+    </ul>
+  </footer>
+</body>
+</html>
